@@ -3,16 +3,21 @@
   width: 960px;
 }
 .search-bar {
-  background-image: url("./logo.jpg");
+  background-image: url("./logo.png");
   background-repeat: no-repeat;
-  background-size: 3rem 3rem;
+  background-size: 3.5rem 3.5rem;
   color: white;
-  background-color: orange;
-  height: 3rem;
-  border: 1px solid red;
+  background-color: #fe6906;
+  height: 3.5rem;
+  /* border: 1px solid red; */
 }
-.search-bar img {
+
+.search-bar label {
+  margin-left: 4rem;
 }
 .search-bar input[type="text"] {
+  margin: 10px; 
+  border: none; 
   width: 50%;
+  height: 2rem;
 }
