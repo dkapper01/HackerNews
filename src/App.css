@@ -27,10 +27,25 @@
 }
 .news-list li {
   list-style-type: none;
-  height: 2.3rem;
+  height: auto;
   background-color: #f6f6ef;
   border-bottom: 1px solid #ededed;
   padding: 10px;
+}
+.news-list li a {
+  display: block;
+}
+.news-list .list-info {
+  font-size: 10px;
+}
+.news-list .list-info .list-detail {
+  display: inline-block;
+  margin-left: 15px;
+  margin-top: 5px; 
+}
+.news-list .list-info .list-detail:nth-child(1) {
+  /* display: inline-block; */
+  margin-left: 0;
 }
 
 /* unvisited link */
