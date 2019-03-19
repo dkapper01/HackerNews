@@ -32,9 +32,9 @@ export default class FetchApi extends Component {
     return (
       <div>
         <SearchBar searchTerm={this.searchTerm} />
-        <ul>
+        <ul className="news-list">
           {hits.map(hit => (
-            <li className="news-list" key={hit.objectID}>
+            <li key={hit.objectID}>
               <a href={hit.url} target="_blank">
                 {hit.title}
               </a>
