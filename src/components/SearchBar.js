@@ -17,7 +17,7 @@ export default class SearchBar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="search-bar">
         <form onSubmit={this.props.searchTerm}>
           <label>Search Hacker New:</label>
           <input

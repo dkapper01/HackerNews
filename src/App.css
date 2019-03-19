@@ -1,4 +1,9 @@
 .App {
   margin: 0 auto;
-  width: 960px; 
+  width: 960px;
+}
+.search-bar {
+  color: white; 
+  background-color: orange;
+  height: 3rem;
 }
