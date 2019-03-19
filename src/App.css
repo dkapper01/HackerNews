@@ -2,6 +2,7 @@
   margin: 0 auto;
   width: 960px;
 }
+/* Search Bar */
 .search-bar {
   background-image: url("./logo.png");
   background-repeat: no-repeat;
@@ -9,15 +10,21 @@
   color: white;
   background-color: #fe6906;
   height: 3.5rem;
-  /* border: 1px solid red; */
 }
-
 .search-bar label {
   margin-left: 4rem;
 }
 .search-bar input[type="text"] {
-  margin: 10px; 
-  border: none; 
+  margin: 10px;
+  border: none;
   width: 50%;
   height: 2rem;
+}
+
+/* News Feed */
+.news-list {
+  list-style-type: none;
+  height: 2.3rem;
+  background-color: #f6f6ef;
+  border-bottom: 1px solid #ededed;
 }
