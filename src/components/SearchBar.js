@@ -26,7 +26,7 @@ export default class SearchBar extends Component {
             value={this.state.value}
             onChange={this.handleOnChange}
           />
-          <input type="submit" value="Submit" />
+          {/* <input type="submit" value="Submit" /> */}
         </form>
       </div>
     );

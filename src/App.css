@@ -3,7 +3,16 @@
   width: 960px;
 }
 .search-bar {
-  color: white; 
+  background-image: url("./logo.jpg");
+  background-repeat: no-repeat;
+  background-size: 3rem 3rem;
+  color: white;
   background-color: orange;
   height: 3rem;
+  border: 1px solid red;
+}
+.search-bar img {
+}
+.search-bar input[type="text"] {
+  width: 50%;
 }
