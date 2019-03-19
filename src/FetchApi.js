@@ -38,6 +38,9 @@ export default class FetchApi extends Component {
               <a href={hit.url} target="_blank">
                 {hit.title}
               </a>
+              <p>
+                {hit.points} {hit.author} {hit.created_at}
+              </p>
             </li>
           ))}
         </ul>
