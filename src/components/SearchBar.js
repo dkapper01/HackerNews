@@ -1,4 +1,16 @@
 import React, { Component } from "react";
+import { blockParams } from "handlebars";
+import { black } from "ansi-colors";
+
+const byStyle = {
+  color: "black",
+  margin: "5px",
+  fontSize: "10px"
+};
+const nameStyle = {
+  color: "white",
+  fontSize: "12px"
+};
 
 export default class SearchBar extends Component {
   constructor(props) {
@@ -23,7 +35,6 @@ export default class SearchBar extends Component {
           <div>Hacker News</div>
           <div>Search</div>
         </div>
-
         <form onSubmit={this.props.searchQuery}>
           {/* <label>Search Hacker New:</label> */}
           <input
@@ -32,8 +43,13 @@ export default class SearchBar extends Component {
             value={this.state.value}
             onChange={this.handleOnChange}
           />
-          {/* <input type="submit" value="Submit" /> */}
         </form>
+        <span style={byStyle}>by</span>{" "}
+        <span style={nameStyle}>
+          <a href="https://danielkapper.com/" target="_blank">
+            Daniel Kapper
+          </a>
+        </span>
       </div>
     );
   }
