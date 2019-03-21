@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import SearchBar from "./components/SearchBar";
+import ContentLoader, { Facebook } from "react-content-loader";
 
 const URL = `https://hn.algolia.com/api/v1/search?query=`;
 const DEFAULT_QUERY = "react";
+const MyLoader = () => <ContentLoader />;
 
 export default class FetchApi extends Component {
   constructor(props) {
@@ -63,7 +65,23 @@ export default class FetchApi extends Component {
       return <p>{error.message}</p>;
     }
     if (isLoading) {
-      return <p>Loading...</p>;
+      return (
+        <ContentLoader
+          height={160}
+          width={900}
+          speed={2}
+          primaryColor="#f3f3f3"
+          secondaryColor="#ecebeb"
+        >
+          <rect x="5" y="18" rx="3" ry="3" width="900" height="6.4" />
+          <rect x="5" y="40.08" rx="3" ry="3" width="900" height="6.34" />
+          <rect x="5" y="59" rx="3" ry="3" width="900" height="6.4" />
+          <rect x="5" y="77.61" rx="3" ry="3" width="900" height="6.72" />
+          <rect x="5" y="98" rx="3" ry="3" width="900" height="6.4" />
+          <rect x="5" y="116" rx="3" ry="3" width="900" height="6.4" />
+          <rect x="5" y="137" rx="3" ry="3" width="900" height="6.4" />
+        </ContentLoader>
+      );
     }
     return (
       <div>
