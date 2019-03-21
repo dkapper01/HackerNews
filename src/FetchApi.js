@@ -4,7 +4,7 @@ import ContentLoader, { Facebook } from "react-content-loader";
 
 const URL = `https://hn.algolia.com/api/v1/search?query=`;
 const DEFAULT_QUERY = "react";
-const MyLoader = () => <ContentLoader />;
+// const MyLoader = () => <ContentLoader />;
 
 export default class FetchApi extends Component {
   constructor(props) {

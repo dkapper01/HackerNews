@@ -18,8 +18,14 @@ export default class SearchBar extends Component {
   render() {
     return (
       <div className="search-bar">
+        <div className="logo">H</div>
+        <div className="logo-name">
+          <div>Hacker News</div>
+          <div>Search</div>
+        </div>
+
         <form onSubmit={this.props.searchQuery}>
-          <label>Search Hacker New:</label>
+          {/* <label>Search Hacker New:</label> */}
           <input
             type="text"
             name="funny"

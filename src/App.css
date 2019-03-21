@@ -1,24 +1,44 @@
 .App {
   margin: 0 auto;
-  width: 960px;
+  width: 75%;
 }
 /* Search Bar */
 .search-bar {
-  background-image: url("./logo.png");
-  background-repeat: no-repeat;
-  background-size: 3.5rem 3.5rem;
   color: white;
   background-color: #fe6906;
-  height: 3.5rem;
+  display: flex;
+  width: 100%;
+  height: 62px;
+  align-items: center;
+
 }
-.search-bar label {
-  margin-left: 4rem;
+.search-bar .logo {
+  line-height: 35px;
+  border: 2px solid white;
+  font-size: 29px;
+  height: 35px;
+  text-align: center;
+  width: 35px;
+  margin-left: 10px;
+  margin-right: 10px; 
 }
-.search-bar input[type="text"] {
-  margin: 10px;
+
+form {
+  width: 60%;
+  height: 45px;
+}
+
+.search-bar form input[type="text"] {
   border: none;
-  width: 50%;
-  height: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+/* Logo Name */
+.logo-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 19px; 
 }
 
 /* News Feed */
@@ -41,7 +61,7 @@
 .news-list .list-info .list-detail {
   display: inline-block;
   margin-left: 15px;
-  margin-top: 5px; 
+  margin-top: 5px;
 }
 .news-list .list-info .list-detail:nth-child(1) {
   /* display: inline-block; */
