@@ -73,13 +73,13 @@ export default class FetchApi extends Component {
           primaryColor="#f3f3f3"
           secondaryColor="#ecebeb"
         >
-          <rect x="5" y="18" rx="3" ry="3" width="900" height="6.4" />
-          <rect x="5" y="40.08" rx="3" ry="3" width="900" height="6.34" />
-          <rect x="5" y="59" rx="3" ry="3" width="900" height="6.4" />
-          <rect x="5" y="77.61" rx="3" ry="3" width="900" height="6.72" />
-          <rect x="5" y="98" rx="3" ry="3" width="900" height="6.4" />
-          <rect x="5" y="116" rx="3" ry="3" width="900" height="6.4" />
-          <rect x="5" y="137" rx="3" ry="3" width="900" height="6.4" />
+          <rect x="5" y="18" rx="3" ry="3" width="900" height="6.5" />
+          <rect x="5" y="40.08" rx="3" ry="3" width="900" height="6.5" />
+          <rect x="5" y="59" rx="3" ry="3" width="900" height="6.5" />
+          <rect x="5" y="77.61" rx="3" ry="3" width="900" height="6.5" />
+          <rect x="5" y="98" rx="3" ry="3" width="900" height="6.5" />
+          <rect x="5" y="116" rx="3" ry="3" width="900" height="6.5" />
+          <rect x="5" y="137" rx="3" ry="3" width="900" height="6.5" />
         </ContentLoader>
       );
     }
