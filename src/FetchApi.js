@@ -1,37 +1,73 @@
 import React, { Component } from "react";
 import SearchBar from "./components/SearchBar";
 
-const URL = "https://hn.algolia.com/api/v1/search?query=";
+const URL = `https://hn.algolia.com/api/v1/search?query=`;
 const DEFAULT_QUERY = "react";
 
 export default class FetchApi extends Component {
   constructor(props) {
     super(props);
-    this.searchTerm = this.searchTerm.bind(this);
+    this.searchQuery = this.searchQuery.bind(this);
 
     this.state = {
-      hits: []
+      hits: [],
+      isLoading: false,
+      error: null
     };
   }
 
   componentDidMount() {
     fetch(URL + DEFAULT_QUERY)
-      .then(res => res.json())
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          throw new Error("Something went wrong");
+        }
+      })
       .then(data => {
         console.log(data);
-        return this.setState({ hits: data.hits });
-      });
+        return this.setState({ hits: data.hits, isLoading: false });
+      })
+      .catch(error => this.setState({ error, isLoading: false }));
   }
-  searchTerm(e) {
+
+  searchQuery(e) {
     e.preventDefault();
     console.log(e.target.elements.funny.value);
+
+    this.setState({ isLoading: true });
+
+    fetch(
+      `https://hn.algolia.com/api/v1/search?query=${
+        e.target.elements.funny.value
+      }`
+    )
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          throw new Error("Something went wrong");
+        }
+      })
+      .then(data => {
+        console.log(data);
+        return this.setState({ hits: data.hits, isLoading: false });
+      })
+      .catch(error => this.setState({ error, isLoading: false }));
   }
 
   render() {
-    const { hits } = this.state;
+    const { hits, isLoading, error } = this.state;
+    if (error) {
+      return <p>{error.message}</p>;
+    }
+    if (isLoading) {
+      return <p>Loading...</p>;
+    }
     return (
       <div>
-        <SearchBar searchTerm={this.searchTerm} />
+        <SearchBar searchQuery={this.searchQuery} />
         <ul className="news-list">
           {hits.map(hit => (
             <li key={hit.objectID}>
