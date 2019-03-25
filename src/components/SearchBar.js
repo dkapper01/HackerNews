@@ -32,8 +32,8 @@ export default class SearchBar extends Component {
       <div className="search-bar">
         <div className="logo">H</div>
         <div className="logo-name">
-          <div>Hacker News</div>
           <div>Search</div>
+          <div>Hacker News</div>
         </div>
         <form onSubmit={this.props.searchQuery}>
           {/* <label>Search Hacker New:</label> */}

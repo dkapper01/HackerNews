@@ -58,6 +58,7 @@ form {
 /* News Feed */
 .news-list {
   padding-left: 0;
+  margin: 0;
 }
 .news-list li {
   list-style-type: none;
@@ -113,19 +114,38 @@ a:link {
 a:visited {
   color: white;
   text-decoration: none;
-
 }
 
 /* mouse over link */
 a:hover {
   color: white;
   text-decoration: none;
-
 }
 
 /* selected link */
 a:active {
   color: white;
   text-decoration: none;
-
 }
+
+/* Sorting form */
+.sortingBackGround {
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+.sortingForm {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  margin: 0 0 0 10px;
+}
+select {
+  background-color: #f1f1f1;
+  border: 1px solid #a8a8a8;
+  font-size: 90%;
+  padding: 0;
+  margin: 0 0.5rem;
+}
+
