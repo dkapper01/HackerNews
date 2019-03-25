@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SearchBar from "./components/SearchBar";
+import SortingBar from "./components/sortingComponents/SortingBar";
 import ContentLoader, { Facebook } from "react-content-loader";
 
 const URL = `https://hn.algolia.com/api/v1/search?query=`;
@@ -86,6 +87,7 @@ export default class FetchApi extends Component {
     return (
       <div>
         <SearchBar searchQuery={this.searchQuery} />
+        <SortingBar />
         <ul className="news-list">
           {hits.map(hit => (
             <li key={hit.objectID}>
