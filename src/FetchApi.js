@@ -2,8 +2,12 @@ import React, { Component } from "react";
 import SearchBar from "./components/SearchBar";
 import SortingBar from "./components/sortingComponents/SortingBar";
 import ContentLoader, { Facebook } from "react-content-loader";
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import User from "./components/User";
+import moment from "moment";
 
 const URL = `https://hn.algolia.com/api/v1/search?query=`;
+
 const DEFAULT_QUERY = "react";
 // const MyLoader = () => <ContentLoader />;
 
@@ -96,8 +100,15 @@ export default class FetchApi extends Component {
               </a>
               <div className="list-info">
                 <div className="list-detail">{hit.points}</div>
-                <div className="list-detail">{hit.author}</div>
-                <div className="list-detail">{hit.created_at}</div>
+                <div className="list-detail">
+                  {/* <User hereIsData={this.state.isLoading} /> */}
+                  <a href={`http://hn.algolia.com/api/v1/users/${hit.author}`}>
+                    {hit.author}
+                  </a>
+                </div>
+                <div className="list-detail">
+                  {moment(hit.created_at).fromNow()}
+                </div>
                 <div className="list-detail">Comment: {hit.num_comments}</div>
                 <div className="list-detail">{hit.url}</div>
               </div>
